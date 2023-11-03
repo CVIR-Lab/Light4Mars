@@ -6,4 +6,4 @@ The article is currently being submitted to the journal ISPRS Journal of Photogr
 
 The dataset used in the paper is called [**SynMars-TW**](https://github.com/CVIR-Lab/SynMars/tree/SynMars-TW), which is an open source unstructured environmental fine-grained synthetic dataset based on real data from the TianWen-1 mission.
 
-Light4Mars is on [**MMSegmentation**](https://github.com/open-mmlab/mmsegmentation)
+Light4Mars is on [**MMSegmentation**](https://github.com/open-mmlab/mmsegmentation).
