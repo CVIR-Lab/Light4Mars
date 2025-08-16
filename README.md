@@ -5,20 +5,19 @@ This repository is the code implementation of the paper Light4Mars：A Lightweig
 
 ## Installation
 
-Step 0: Install Miniconda.
-Step 1: Create a virtual environment named light4mars and activate it.
+Step 0: Create a virtual environment named light4mars and activate it.
 ```
 conda create -n light4mars python=3.8 -y
 conda activate light4mars
 ```
 
-Step 2: Install PyTorch 2.0.1 and torchvision 0.15.2.
+Step 1: Install PyTorch 2.0.1 and torchvision 0.15.2.
 ```
 pip install torch==2.0.1
 pip install torchvision==0.15.2
 ```
 
-Step 3: Install MMCV and mmsegmentation.
+Step 2: Install MMCV and mmsegmentation.
 ```
 pip install -U openmim
 mim install mmengine==0.8.4
