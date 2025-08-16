@@ -1,6 +1,9 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 import argparse
 import os.path as osp
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+
 import time
 
 import numpy as np
@@ -18,7 +21,7 @@ from mmseg.registry import MODELS
 def parse_args():
     parser = argparse.ArgumentParser(description='MMSeg benchmark a model')
     parser.add_argument('config', help='test config file path')
-    parser.add_argument('checkpoint', help='checkpoint file')
+    parser.add_argument('--checkpoint', help='checkpoint file')
     parser.add_argument(
         '--log-interval', type=int, default=50, help='interval of logging')
     parser.add_argument(
@@ -77,7 +80,7 @@ def main():
         # the first several iterations may be very slow so skip them
         num_warmup = 5
         pure_inf_time = 0
-        total_iters = 200
+        total_iters = 2000
 
         # benchmark with 200 batches and take the average
         for i, data in enumerate(data_loader):

@@ -2,7 +2,9 @@ CONFIG=$1
 GPUS=$2
 NNODES=${NNODES:-1}
 NODE_RANK=${NODE_RANK:-0}
-PORT=${PORT:-29500}
+
+PORT=${CUDA_VISIBLE_DEVICES=1 PORT=29500 sh tools/dist_train.sh configs/lmars/lmars_synrover.py}
+
 MASTER_ADDR=${MASTER_ADDR:-"127.0.0.1"}
 
 PYTHONPATH="$(dirname $0)/..":$PYTHONPATH \

@@ -1,4 +1,6 @@
 # Copyright (c) OpenMMLab. All rights reserved.
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 import argparse
 import tempfile
 from pathlib import Path
@@ -23,12 +25,12 @@ except ImportError:
 def parse_args():
     parser = argparse.ArgumentParser(
         description='Get the FLOPs of a segmentor')
-    parser.add_argument('config', help='train config file path')
+    parser.add_argument('--config', help='train config file path')
     parser.add_argument(
         '--shape',
         type=int,
         nargs='+',
-        default=[2048, 1024],
+        default=[512, 256],
         help='input image size')
     parser.add_argument(
         '--cfg-options',
@@ -87,7 +89,7 @@ def inference(args: argparse.Namespace, logger: MMLogger) -> dict:
     outputs = get_model_complexity_info(
         model,
         input_shape,
-        inputs=data['inputs'],
+        # inputs=data['inputs'],
         show_table=False,
         show_arch=False)
     result['flops'] = _format_size(outputs['flops'])
