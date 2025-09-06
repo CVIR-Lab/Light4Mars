@@ -28,13 +28,13 @@ pip install mmsegmentation=1.1.1
 ## Dataset Preparation
 The dataset used in the paper is [**SynMars-TW**](https://github.com/CVIR-Lab/SynMars/tree/SynMars-TW), which is subset of the open source unstructured environmental fine-grained synthetic dataset [**SynMars**](https://github.com/CVIR-Lab/SynMars) based on real data from the TianWen-1 mission. Please download the [**SynMars-TW**](https://github.com/CVIR-Lab/SynMars/tree/SynMars-TW) dataset and set it according to the [**MMSegmentation**](https://github.com/open-mmlab/mmsegmentation) data format.
 ### Available datasets
-| Name | Size | Target | View angle | Bsed Mission |
-| :--------- | :---------:  | ---------: | ---------： |--------- |
-| MarsData    | 8390       | Mars rocks  | Rover  | Curiosity rover  |
-| Marsscape    | 单元格6      | panorama     | Rover   | Curiosity rover  |
-| SynMars    | 单元格10     | Rock   | 单元格12  | Rover  |
-| SynMars-TW   | 单元格14     | All terrain    | Rover | Curiosity rover  |
-| SynMars-Air   | 单元格14     | All terrain    | Air  | Curiosity rover  |
+| Name | Size(resolution) | Object | View angle | Bsed Mission |
+| :--------- | :---------:  | ---------: | ---------: |--------- |
+| MarsData    | 8390 (512*512)      | Rock  | Rover  | Curiosity rover  |
+| Marsscape    | 单元格6      | Panorama     | Rover   | Curiosity rover  |
+| SynMars    | 60,000(1024*1024)     | Rock   | 单元格12  | Rover  |
+| SynMars-TW   | 21,000(512*512)     | All terrain    | Rover | Curiosity rover  |
+| SynMars-Air   | 11,700(512*512)  | All terrain    | Air  | Curiosity rover  |
 ## Model Training
 ```
 python train.py configs/light4mars/light4mars-b_synmars-tw.py
