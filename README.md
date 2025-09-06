@@ -28,13 +28,13 @@ pip install mmsegmentation=1.1.1
 ## Dataset Preparation
 The dataset used in the paper is [**SynMars-TW**](https://github.com/CVIR-Lab/SynMars/tree/SynMars-TW), which is subset of the open source unstructured environmental fine-grained synthetic dataset [**SynMars**](https://github.com/CVIR-Lab/SynMars) based on real data from the TianWen-1 mission. Please download the [**SynMars-TW**](https://github.com/CVIR-Lab/SynMars/tree/SynMars-TW) dataset and set it according to the [**MMSegmentation**](https://github.com/open-mmlab/mmsegmentation) data format.
 ### Available datasets
-| Name | Size(resolution) | Object | View angle | Bsed Mission |
+| Name | Size(resolution) | Object |  level | View angle | Bsed Mission |
 | :--------- | :---------:  | ---------: | ---------: |--------- |
-| MarsData    | 8390 (512*512)      | Rock  | Rover  | Curiosity rover  |
-| Marsscape    | 195(Panorama,3779 subimages )      |  All terrain   | Rover   | Curiosity rover  |
-| SynMars    | 60,000(1024*1024)     | Rock   | Rover  | TianWen-1  |
-| SynMars-TW   | 21,000(512*512)     | All terrain    | Rover | TianWen-1  |
-| SynMars-Air   | 11,700(512*512)  | All terrain    | Air  | TianWen-1  |
+| MarsData    | 8390 (512*512)      | Rock  | semantic segmentation  |Rover  | Curiosity rover  |
+| Marsscape    | 195(Panorama,3779 subimages )      |  All terrain | semantic segmentation  | Rover   | Curiosity rover  |
+| SynMars    | 60,000(1024*1024)     | Rock   | semantic segmentation| Rover  | TianWen-1  |
+| SynMars-TW   | 21,000(512*512)     | All terrain  | semantic segmentation  | Rover | TianWen-1  |
+| SynMars-Air   | 11,700(512*512)  | All terrain  | semantic segmentation  | Air  | TianWen-1  |
 ## Model Training
 ```
 python train.py configs/light4mars/light4mars-b_synmars-tw.py
