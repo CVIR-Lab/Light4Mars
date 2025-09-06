@@ -26,8 +26,15 @@ pip install mmsegmentation=1.1.1
 ```
 
 ## Dataset Preparation
-The dataset used in the paper is [**SynMars-TW**](https://github.com/CVIR-Lab/SynMars/tree/SynMars-TW), which is subset of the open source unstructured environmental fine-grained synthetic dataset [**SynMars**](https://github.com/CVIR-Lab/SynMars) based on real data from the TianWen-1 mission. Please download the [**SynMars-TW**](https://github.com/CVIR-Lab/SynMars/tree/SynMars-TW) or [**SynMars-Air**](https://github.com/CVIR-Lab/SynMars/tree/SynMars-Air) dataset and set it according to the [**MMSegmentation**](https://github.com/open-mmlab/mmsegmentation) data format.
-
+The dataset used in the paper is [**SynMars-TW**](https://github.com/CVIR-Lab/SynMars/tree/SynMars-TW), which is subset of the open source unstructured environmental fine-grained synthetic dataset [**SynMars**](https://github.com/CVIR-Lab/SynMars) based on real data from the TianWen-1 mission. Please download the [**SynMars-TW**](https://github.com/CVIR-Lab/SynMars/tree/SynMars-TW) dataset and set it according to the [**MMSegmentation**](https://github.com/open-mmlab/mmsegmentation) data format.
+### Available datasets
+| Dataset | Size | Target | Bsed Mission |
+| :--------- | :---------:  | ---------: | --------- |
+| MarsData    | 单元格2      | 单元格3    | 单元格4   |
+| Marsscape    | 单元格6      | 单元格7    | 单元格8   |
+| SynMars    | 单元格10     | 单元格11   | 单元格12  |
+| SynMars-TW   | 单元格14     | 单元格15   | 单元格16  |
+| SynMars-TW   | 单元格14     | 单元格15   | 单元格16  |
 ## Model Training
 ```
 python train.py configs/light4mars/light4mars-b_synmars-tw.py
