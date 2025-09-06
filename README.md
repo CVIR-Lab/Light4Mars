@@ -28,8 +28,8 @@ pip install mmsegmentation=1.1.1
 ## Dataset Preparation
 The dataset used in the paper is [**SynMars-TW**](https://github.com/CVIR-Lab/SynMars/tree/SynMars-TW), which is subset of the open source unstructured environmental fine-grained synthetic dataset [**SynMars**](https://github.com/CVIR-Lab/SynMars) based on real data from the TianWen-1 mission. Please download the [**SynMars-TW**](https://github.com/CVIR-Lab/SynMars/tree/SynMars-TW) dataset and set it according to the [**MMSegmentation**](https://github.com/open-mmlab/mmsegmentation) data format.
 ### Available datasets
-| Name | Size(resolution) | Object |  level | View angle | Bsed Mission |
-| :--------- | :---------:  | ---------: | ---------: |--------- |
+| Name | Size(resolution) | Object |  Support | View angle | Bsed Mission |
+| :--------- | :---------:  | ---------: | ---------:| ---------: |--------- |
 | MarsData    | 8390 (512*512)      | Rock  | semantic segmentation  |Rover  | Curiosity rover  |
 | Marsscape    | 195(Panorama,3779 subimages )      |  All terrain | semantic segmentation  | Rover   | Curiosity rover  |
 | SynMars    | 60,000(1024*1024)     | Rock   | semantic segmentation| Rover  | TianWen-1  |
