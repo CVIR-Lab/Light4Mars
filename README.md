@@ -32,9 +32,9 @@ The dataset used in the paper is [**SynMars-TW**](https://github.com/CVIR-Lab/Sy
 | :--------- | :---------:  | ---------: | ---------: |--------- |
 | MarsData    | 8390 (512*512)      | Rock  | Rover  | Curiosity rover  |
 | Marsscape    | 单元格6      | Panorama     | Rover   | Curiosity rover  |
-| SynMars    | 60,000(1024*1024)     | Rock   | 单元格12  | Rover  |
-| SynMars-TW   | 21,000(512*512)     | All terrain    | Rover | Curiosity rover  |
-| SynMars-Air   | 11,700(512*512)  | All terrain    | Air  | Curiosity rover  |
+| SynMars    | 60,000(1024*1024)     | Rock   | Rover  | TianWen-1  |
+| SynMars-TW   | 21,000(512*512)     | All terrain    | Rover | TianWen-1  |
+| SynMars-Air   | 11,700(512*512)  | All terrain    | Air  | TianWen-1  |
 ## Model Training
 ```
 python train.py configs/light4mars/light4mars-b_synmars-tw.py
